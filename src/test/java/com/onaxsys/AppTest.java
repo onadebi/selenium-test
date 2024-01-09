@@ -35,7 +35,7 @@ public class AppTest
     public void setUp() {
         System.out.println("Setup - Initializing Chrome Driver");        
         //get current directory
-        _driver.get("https://www.google.com");
+        _driver.get("https://www.onaxsys.com");
     }
 
     @AfterAll
