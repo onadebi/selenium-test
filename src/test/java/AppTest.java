@@ -1,9 +1,7 @@
-package com.onaxsys;
-
 import static org.junit.jupiter.api.Assertions.*;
 import java.nio.file.Paths;
 
-import com.onaxsys.data.WebsiteData;
+import data.WebsiteData;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterAll;
@@ -39,10 +37,11 @@ public class AppTest
     }
 
     /**
-     * Rigorous Test :-)
+     * methodName: WebsiteHomePageHasTitle
+     * description: This test will navigate to the website homepage and verify that the title is not empty
+     * return: void
+     * purpose: To verify that the website homepage has a title
      */
-
-
     @Test
     public void WebsiteHomePageHasTitle()
     {
@@ -51,6 +50,12 @@ public class AppTest
         assertNotNull(title);
     }
 
+    /**
+     * methodName: WebsiteHomePageHasTitle
+     * description: This test will navigate to the website various pages and verify that the title is not empty
+     * return: void
+     * purpose: To verify that the website pages all have titles
+     */
     @Test
     public void AllWebsitePagesHaveTitle(){
         for(String weblink : WebsiteData.WeblinkData()) {

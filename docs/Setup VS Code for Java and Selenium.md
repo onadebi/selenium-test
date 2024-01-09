@@ -23,3 +23,30 @@ Also, in addition to the `Java Projects`, there would also be added a `Create Ma
   - Fill in the presented options like GroupdId and ArchitypeId
   - Select the Snapshot version (recommended that you select the most recent stable snapshot, except you have a reason to do otherwise.)
   - Some options wuld eventually be moved to the command line for you to complete. You can just press `enter` for the rest of this process.
+
+**3)** Ensure that the `pom.xml` has the required dependecies for `JUnit 5` and `Selenium`. It should look something like the below:
+```xml
+  <dependencies>
+    
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.16.1</version>
+    </dependency>
+
+  </dependencies>
+```
