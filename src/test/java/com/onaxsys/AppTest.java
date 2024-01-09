@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,20 +18,38 @@ public class AppTest
 {
 
     private WebDriver _driver;
-    @BeforeEach
-    public void setUp() {
-        System.out.println("Setup - Initializing Chrome Driver");
-        ChromeOptions options = new ChromeOptions();
+    private final ChromeOptions options;
+
+    public AppTest()
+    {
+        options = new ChromeOptions();
         // options.addArguments("--headless");
-        //get current directory
+        _driver  = new ChromeDriver(options);
+        _driver.manage().window().maximize();
         String currentDir = System.getProperty("user.dir");
         String fullPath = Paths.get(currentDir, "drivers","X64", "chromedriver.exe").toString();
         System.setProperty("webdriver.chrome.driver", fullPath);
-         _driver  = new ChromeDriver(options);
+    }
+
+    @BeforeEach
+    public void setUp() {
+        System.out.println("Setup - Initializing Chrome Driver");        
+        //get current directory
         _driver.get("https://www.google.com");
     }
+
+    @AfterAll
+    public void tearDown() {
+        System.out.println("TearDown - Closing Chrome Driver");
+        _driver.quit();
+    }
+
+
     /**
-     * Rigorous Test :-)
+     * MethodName: shouldAnswerWithTrue
+     * Description: Test method
+     * @return void
+     * Purpose: Test method
      */
     @Test
     public void shouldAnswerWithTrue()
