@@ -10,7 +10,7 @@
 
   <name>demotest</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.onaxsys.com</url>
+  <url>https://www.onaxsys.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -41,26 +41,26 @@
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-    <dependency>
+    <!-- <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
       <version>7.15.0</version>
-    </dependency>
+    </dependency> -->
 
     <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-    <dependency>
+    <!-- <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-testng</artifactId>
       <version>7.15.0</version>
-    </dependency>
+    </dependency> -->
 
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-    <dependency>
+    <!-- <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>7.9.0</version>
       <scope>test</scope>
-    </dependency>
+    </dependency> -->
 
   </dependencies>
 
